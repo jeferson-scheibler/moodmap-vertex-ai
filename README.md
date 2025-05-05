@@ -2,10 +2,13 @@
 
 O **MoodMap** é um projeto Android que combina **Machine Learning**, **Visão Computacional** e **Google Vertex AI** para identificar emoções humanas por meio da câmera do celular. A ideia é detectar expressões faciais em tempo real, enviar os dados para um modelo treinado no Vertex AI e exibir a emoção detectada no app.
 
-Este repositório contém:
-- Código-fonte Android do app (no Wiki)
-- Scripts de geração de dados
-- Treinamento e deploy de modelo no Vertex AI (no Wiki)
+Acesse a Wiki para:
+
+- Entender o propósito do projeto
+- Ver como o modelo foi treinado no Vertex AI
+- Aprender a usar o ML Kit para detecção facial
+- Conectar seu app Android ao endpoint do Vertex AI
+- Gerar dados sintéticos para treinar modelos de reconhecimento de emoções
 
 ## 📖 Wiki Oficial do Projeto
 
@@ -16,17 +19,19 @@ Para facilitar o entendimento e a replicação deste experimento, criamos uma Wi
 A Wiki está organizada em tópicos sequenciais:
 
 1. **Home** - https://github.com/jeferson-scheibler/moodmap-vertex-ai/wiki
-   Visão geral do projeto, propósito e funcionamento.
+   - Visão geral do projeto, propósito e funcionamento.
+   
 3. **Sobre o Vertex AI** - https://github.com/jeferson-scheibler/moodmap-vertex-ai/wiki/Sobre-o-Vertex-AI
-   Introdução ao Vertex AI e seu papel no projeto.
+   - Introdução ao Vertex AI e seu papel no projeto.
+   
 5. **Reconhecimento de Emoções Faciais com ML Kit** - https://github.com/jeferson-scheibler/moodmap-vertex-ai/wiki/Reconhecimento-de-Emo%C3%A7%C3%B5es-Faciais-com-ML-Kit
-   Explicação sobre os atributos faciais analisados e como o dataset foi construído.
+   - Explicação sobre os atributos faciais analisados e como o dataset foi construído.
 
 7. **Treinamento do Modelo** - https://github.com/jeferson-scheibler/moodmap-vertex-ai/wiki/Treinamento-do-Modelo
-   Passo a passo para importar o CSV, treinar o modelo no Vertex AI e ativar o endpoint.
+   - Passo a passo para importar o CSV, treinar o modelo no Vertex AI e ativar o endpoint.
 
 8. **App Android com Vertex AI ML Kit** - https://github.com/jeferson-scheibler/moodmap-vertex-ai/wiki/App-Android-com-Vertex-AI-ML-Kit
-   Guia prático de como criar o app, configurar câmera, capturar dados, analisar emoções e integrar com o Vertex AI.
+   - Guia prático de como criar o app, configurar câmera, capturar dados, analisar emoções e integrar com o Vertex AI.
 
 ---
 
@@ -40,12 +45,18 @@ A Wiki está organizada em tópicos sequenciais:
 
 ---
 
-## 📂 Repositório
+## 📂 Estrutura deste repositório
 
-- `app/` → código Android
-- `scripts/` → geração de dados sintéticos
-- `README.md` → explicações iniciais
-- `wiki/` → conteúdo principal da documentação (via Wiki)
+| Arquivo | Descrição |
+|--------|-----------|
+| `Gerar_Valores_de_Emoções_para_Análise_Facial.ipynb` | Notebook para gerar dados sintéticos de emoções |
+| `gerar_valores_de_emoções_para_análise_facial.py` | Versão Python do script de geração de dados |
+| `LICENSE` | Licença do projeto |
+| `README.md` | Este arquivo de apresentação |
+
+---
+
+📌 Se você está buscando uma forma prática de usar **ML Kit + Vertex AI** em projetos Android com reconhecimento facial, o **MoodMap** é o ponto de partida ideal.
 
 ---
 
