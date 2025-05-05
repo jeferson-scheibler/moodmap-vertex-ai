@@ -1,116 +1,64 @@
-# ☁️ MoodMap – Integração Android + Vertex AI
+# 🌍 MoodMap – Reconhecimento Emocional com Vertex AI
 
-Este repositório demonstra o uso do **Google Vertex AI** integrado a um aplicativo Android real.  
-A proposta é capturar expressões faciais do usuário, analisar o som ambiente, identificar o **estado emocional** e sugerir **lugares** próximos adequados ao humor detectado.
+O **MoodMap** é um projeto Android que combina **Machine Learning**, **Visão Computacional** e **Google Vertex AI** para identificar emoções humanas por meio da câmera do celular. A ideia é detectar expressões faciais em tempo real, enviar os dados para um modelo treinado no Vertex AI e exibir a emoção detectada no app.
 
-## 📚 Introdução
+Este repositório contém:
+- Código-fonte Android do app (no Wiki)
+- Scripts de geração de dados
+- Treinamento e deploy de modelo no Vertex AI (no Wiki)
 
-**Vertex AI** é a **plataforma completa** de inteligência artificial da **Google Cloud**.
+## 📖 Wiki Oficial do Projeto
 
-Com o Vertex AI, **não precisamos** nos preocupar com servidores, infraestrutura, balanceamento de carga ou complexidades técnicas pesadas de Machine Learning — ele gerencia tudo isso para nós.
+Para facilitar o entendimento e a replicação deste experimento, criamos uma Wiki estruturada com um **guia completo passo a passo**.
 
-O **objetivo** do Vertex AI é simples:  
-➡️ Tornar mais fácil **treinar**, **implementar** (deploy) e **usar** **modelos de Machine Learning** em **produção**, com **poucas linhas de código** e **alta performance**.
+### 🧭 Estrutura da Wiki
 
----
+A Wiki está organizada em tópicos sequenciais:
 
-## 🧩 Principais funcionalidades do Vertex AI
+1. **[MoodMap – Reconhecimento Emocional com Vertex AI](https://github.com/SEU_USUARIO/moodmap-vertex-ai/wiki/MoodMap-–-Reconhecimento-Emocional-com-Vertex-AI)**  
+   Visão geral do projeto, propósito e funcionamento.
 
-| Funcionalidade | Explicação Simples |
-|:--------------|:------------------|
-| **AutoML** | Treine modelos de alta qualidade automaticamente com base em seus dados, sem precisar escrever código de IA |
-| **Custom Training** | Faça treinamentos personalizados, usando seus próprios algoritmos e ambientes customizados |
-| **Vertex AI Workbench** | Tenha um ambiente integrado (tipo um Jupyter Notebook avançado) para prototipar seus modelos |
-| **Dataset Management** | Armazene e gerencie datasets para Machine Learning |
-| **Model Deployment** | Faça o deploy dos seus modelos em Endpoints escaláveis para consumir em apps reais |
-| **MLOps Integrado** | Versionamento de modelos, monitoramento, controle de performance e atualizações contínuas (ciência de dados de verdade!) |
+2. **[Sobre o Vertex AI](https://github.com/SEU_USUARIO/moodmap-vertex-ai/wiki/Sobre-o-Vertex-AI)**  
+   Introdução ao Vertex AI e seu papel no projeto.
 
----
+3. **[Reconhecimento de Emoções Faciais com ML Kit](https://github.com/SEU_USUARIO/moodmap-vertex-ai/wiki/Reconhecimento-de-Emoções-Faciais-com-ML-Kit)**  
+   Explicação sobre os atributos faciais analisados e como o dataset foi construído.
 
-## 🔥 As possibilidades do Vertex AI
+4. **[Treinamento do Modelo](https://github.com/SEU_USUARIO/moodmap-vertex-ai/wiki/Treinamento-do-Modelo)**  
+   Passo a passo para importar o CSV, treinar o modelo no Vertex AI e ativar o endpoint.
 
-O Vertex AI não serve apenas para “treinar modelos”.
+5. **[App Android com Vertex AI ML Kit](https://github.com/SEU_USUARIO/moodmap-vertex-ai/wiki/App-Android-com-Vertex-AI-ML-Kit)**  
+   Guia prático de como criar o app, configurar câmera, capturar dados, analisar emoções e integrar com o Vertex AI.
 
-Ele possibilita **construir soluções de ponta a ponta**, como:
-
-- 📸 **Classificação de imagens** (reconhecimento de objetos, faces, produtos)
-- 🧾 **Análise de texto** (sentimento, tradução, resumo automático)
-- 🏥 **Predição de eventos** (prognóstico de doenças, falhas de máquinas)
-- 🛒 **Recomendação de produtos** (como Amazon, Netflix)
-- 🗺️ **Análise de localização** (sugerir melhores locais com base em comportamento, como estamos fazendo!)
-- 🎤 **Processamento de áudio** (reconhecimento de fala, análise de sons ambientais)
-- 🎬 **Detecção em vídeos** (identificar movimentos, objetos, pessoas)
-
----
-## 📈 Por que usar o Vertex AI e não treinar modelos locais?
-
-| Vertex AI | Treinar Localmente |
-|:---------|:------------------|
-| Escala ilimitada na nuvem 🌎 | Limitação de hardware local |
-| Modelo gerenciado, com alta disponibilidade | Modelo sujeito a falhas de servidor |
-| AutoML encontra o melhor modelo para seus dados | Treinamento manual, exige expertise em ML |
-| Fácil integração com apps via API | Necessidade de configurar servidores de inferência |
+> 📌 Os links acima são exemplos — substitua `"SEU_USUARIO"` pelo seu nome de usuário no GitHub para que funcionem corretamente no seu repositório.
 
 ---
 
-## No nosso projeto: Como usamos o Vertex AI?
+## 🚀 Requisitos Básicos
 
-**No MoodMap**, usamos o Vertex AI para:
-
-| Etapa | Detalhes |
-|:-----|:---------|
-| 🎯 **Objetivo** | Criar um modelo de Machine Learning que detecta a emoção do usuário com base nos dados faciais capturados (sorriso, olhos, ângulos, landmarks) |
-| 📂 **Entrada de dados** | Um CSV com milhares de exemplos de combinações de expressões faciais e o humor associado |
-| 🏋️ **Treinamento** | Usamos **AutoML Tabular**: o Vertex AI treinou automaticamente o melhor modelo |
-| ☁️ **Deploy** | Fizemos o deploy do modelo em um **Endpoint** gerenciado pela Google Cloud |
-| 🔥 **Inferência no app** | Nosso app Android envia dados faciais para o Vertex AI e recebe de volta a emoção predita |
+- Conta Google Cloud com faturamento ativado
+- Projeto criado no GCP
+- Permissões para criar endpoints no Vertex AI
+- Android Studio instalado
+- Dispositivo com câmera frontal ou emulador com suporte
 
 ---
 
-## 🛠️ Arquivo base (.csv)
+## 📂 Repositório
 
-O dataset utilizado para treinar o modelo está incluído no projeto no diretório: /datasets/treinamento_humor_unimap.csv
-
-Esse arquivo contém **exemplos sintéticos** com 11 atributos faciais para classificação de humor.  
-Você pode usá-lo para **recriar o experimento** facilmente no Vertex AI.
-
----
-
-## 🚀 Passo a passo detalhado para recriar o modelo no Vertex AI
-
-### 1. Subir o dataset no Vertex AI
-
-- Acesse o console do [Vertex AI](https://console.cloud.google.com/vertex-ai)
-- Vá em **Datasets** → **Create Dataset**
-- Escolha **Tabular Dataset**
-- Faça o upload do arquivo `treinamento_humor_unimap.csv`
-- Defina a coluna alvo (**Target Column**) como `humor`
-- Avance e crie o Dataset
+- `app/` → código Android
+- `scripts/` → geração de dados sintéticos
+- `README.md` → explicações iniciais
+- `wiki/` → conteúdo principal da documentação (via Wiki)
 
 ---
 
-### 2. Treinar o modelo AutoML
+## 🤝 Contribuições
 
-- Dentro do seu Dataset, clique em **Train New Model**
-- Escolha **AutoML** como tipo de treinamento
-- Nomeie o modelo (ex: `modelo_moodmap`)
-- Deixe as configurações padrão ou ajuste conforme desejar
-- Inicie o treinamento
-
-> 🕒 O treinamento pode levar de alguns minutos a algumas horas dependendo da configuração.
+Sinta-se à vontade para abrir issues ou enviar PRs para melhorias!
 
 ---
-### 3. Fazer o deploy do modelo
 
-- Após o treinamento, clique em **Deploy to Endpoint**
-- Crie um **Endpoint** (ou use um existente)
-- Aguarde a implantação ser concluída
-- Anote o **ID do Endpoint** e o **região** (ex: `southamerica-east1`)
+## 📬 Licença
 
----
-### 4. Atualizar o aplicativo Android
-
-No seu projeto Android:
-
-- Atualize o código para apontar para o novo `endpointId` e `projectId`
-- Certifique-se que a requisição de inferência esteja no formato com todos os valores sendo enviados como string no JSON.
+Distribuído sob a licença MIT. Veja `LICENSE` para mais detalhes.
