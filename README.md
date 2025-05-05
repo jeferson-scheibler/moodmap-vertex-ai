@@ -15,22 +15,25 @@ Para facilitar o entendimento e a replicação deste experimento, criamos uma Wi
 
 A Wiki está organizada em tópicos sequenciais:
 
-1. **[MoodMap – Reconhecimento Emocional com Vertex AI](https://github.com/SEU_USUARIO/moodmap-vertex-ai/wiki/MoodMap-–-Reconhecimento-Emocional-com-Vertex-AI)**  
+1. **Home**
+   https://github.com/jeferson-scheibler/moodmap-vertex-ai/wiki
    Visão geral do projeto, propósito e funcionamento.
 
-2. **[Sobre o Vertex AI](https://github.com/SEU_USUARIO/moodmap-vertex-ai/wiki/Sobre-o-Vertex-AI)**  
+2. **Sobre o Vertex AI**
+   https://github.com/jeferson-scheibler/moodmap-vertex-ai/wiki/Sobre-o-Vertex-AI
    Introdução ao Vertex AI e seu papel no projeto.
 
-3. **[Reconhecimento de Emoções Faciais com ML Kit](https://github.com/SEU_USUARIO/moodmap-vertex-ai/wiki/Reconhecimento-de-Emoções-Faciais-com-ML-Kit)**  
+3. **Reconhecimento de Emoções Faciais com ML Kit**
+   https://github.com/jeferson-scheibler/moodmap-vertex-ai/wiki/Reconhecimento-de-Emo%C3%A7%C3%B5es-Faciais-com-ML-Kit
    Explicação sobre os atributos faciais analisados e como o dataset foi construído.
 
-4. **[Treinamento do Modelo](https://github.com/SEU_USUARIO/moodmap-vertex-ai/wiki/Treinamento-do-Modelo)**  
+4. **Treinamento do Modelo**
+   https://github.com/jeferson-scheibler/moodmap-vertex-ai/wiki/Treinamento-do-Modelo
    Passo a passo para importar o CSV, treinar o modelo no Vertex AI e ativar o endpoint.
 
-5. **[App Android com Vertex AI ML Kit](https://github.com/SEU_USUARIO/moodmap-vertex-ai/wiki/App-Android-com-Vertex-AI-ML-Kit)**  
+5. **App Android com Vertex AI ML Kit**
+   https://github.com/jeferson-scheibler/moodmap-vertex-ai/wiki/App-Android-com-Vertex-AI-ML-Kit
    Guia prático de como criar o app, configurar câmera, capturar dados, analisar emoções e integrar com o Vertex AI.
-
-> 📌 Os links acima são exemplos — substitua `"SEU_USUARIO"` pelo seu nome de usuário no GitHub para que funcionem corretamente no seu repositório.
 
 ---
 
